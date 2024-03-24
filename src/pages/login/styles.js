@@ -12,6 +12,19 @@ export default StyleSheet.create({
         alignItems: 'center',
     },
 
+    voltar:{
+        display:"flex",
+        padding:'10px',
+        alignSelf:'flex-start',
+        alignItems:"flex-start",
+        justifyContent:"flex-start",
+      },
+  
+      voltarImg:{
+        width: '45px',
+        height: '45px',
+      },
+
     imagemPipoca: {
         width: '169px',
         height: '169px',

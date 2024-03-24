@@ -6,6 +6,10 @@ import { useState } from "react";
 
 export default function Home() {
 
+  const handleNavigateToLogin = () => {
+    navigation.navigate('Login');
+};
+
   const navigation = useNavigation();
 
   return (
@@ -25,7 +29,7 @@ export default function Home() {
           />
         </View>
         <View style={styles.icon}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={handleNavigateToLogin}>
             <Image
               source={require('./../../../images/User.png')}
             />

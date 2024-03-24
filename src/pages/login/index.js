@@ -11,6 +11,15 @@ import { useFonts, Oswald_600SemiBold, Oswald_200ExtraLight, Oswald_300Light} fr
 
 export default function Login() {
 
+
+  const hadleSair = () => {
+    navigation.navigate('Home');
+};
+
+const facaLogin = () => {
+  navigation.navigate('facaLogin');
+};
+
   const [fonteLoaded] = useFonts({
     Oswald_600SemiBold,
     Oswald_200ExtraLight,
@@ -27,6 +36,14 @@ export default function Login() {
 
   return (
     <View style={styles.container}>
+        <View style={styles.voltar}>
+            <TouchableOpacity onPress={hadleSair}>
+                <Image
+                    style={styles.voltarImg}
+                    source={require('./../../../assets/voltar.png')}
+                    />
+            </TouchableOpacity>
+        </View>
       <View style={styles.LoginCaixa}>
         <View style={styles.LoginTitlulo}>
           <Text style={styles.titulo}>
@@ -43,7 +60,7 @@ export default function Login() {
           />
         </View>
         <View style={styles.LoginBotao}>
-          <TouchableOpacity style={styles.botaoLogin}>
+          <TouchableOpacity style={styles.botaoLogin} onPress={facaLogin}>
             <Image
               style={styles.imagemEntrar}
               source={entrar}
